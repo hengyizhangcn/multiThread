@@ -7,6 +7,7 @@
 //
 
 #import "TicketSellViewController.h"
+#import "UIViewController+print.h"
 @interface TicketSellViewController ()
 {
     int tickets;
@@ -21,6 +22,11 @@
 
 @implementation TicketSellViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%@", self.printStr);
+}
 
 - (void)viewDidLoad
 {
@@ -40,6 +46,7 @@
     ticketsThreadtwo = [[NSThread alloc] initWithTarget:self selector:@selector(run) object:nil];
     [ticketsThreadtwo setName:@"Thread-2"];
     [ticketsThreadtwo start];
+    self.printStr = @"this is a category property implementation";
 }
 
 
@@ -49,7 +56,7 @@
         //        [ticketsCondition lock];
         [theLock lock];
         if(tickets >= 0){
-            [NSThread sleepForTimeInterval:1.0];
+//            [NSThread sleepForTimeInterval:1.0];
             count = 100 - tickets;
             NSLog(@"当前票数是:%d,售出:%d,线程名:%@",tickets,count,[[NSThread currentThread] name]);
             tickets--;

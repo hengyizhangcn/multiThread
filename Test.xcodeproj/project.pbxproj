@@ -12,6 +12,7 @@
 		99030A041CCF38B70012DD27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99030A031CCF38B70012DD27 /* ViewController.m */; };
 		99030A091CCF38B70012DD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99030A081CCF38B70012DD27 /* Assets.xcassets */; };
 		99030A151CCF4A770012DD27 /* TicketSellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99030A141CCF4A770012DD27 /* TicketSellViewController.m */; };
+		99E8069A1CD1B40F00973F63 /* UIViewController+print.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E806991CD1B40F00973F63 /* UIViewController+print.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		99030A0D1CCF38B70012DD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99030A131CCF4A770012DD27 /* TicketSellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketSellViewController.h; sourceTree = "<group>"; };
 		99030A141CCF4A770012DD27 /* TicketSellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketSellViewController.m; sourceTree = "<group>"; };
+		99E806981CD1B40F00973F63 /* UIViewController+print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+print.h"; sourceTree = "<group>"; };
+		99E806991CD1B40F00973F63 /* UIViewController+print.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+print.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				990309FC1CCF38B70012DD27 /* Supporting Files */,
 				99030A131CCF4A770012DD27 /* TicketSellViewController.h */,
 				99030A141CCF4A770012DD27 /* TicketSellViewController.m */,
+				99E806981CD1B40F00973F63 /* UIViewController+print.h */,
+				99E806991CD1B40F00973F63 /* UIViewController+print.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				99030A041CCF38B70012DD27 /* ViewController.m in Sources */,
 				99030A011CCF38B70012DD27 /* AppDelegate.m in Sources */,
 				990309FE1CCF38B70012DD27 /* main.m in Sources */,
+				99E8069A1CD1B40F00973F63 /* UIViewController+print.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +285,7 @@
 				99030A121CCF38B70012DD27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

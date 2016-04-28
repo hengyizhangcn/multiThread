@@ -18,6 +18,8 @@
     NSLock *theLock;
 }
 
+@property (nonatomic, strong) NSMutableArray *greeting;
+
 @end
 
 @implementation TicketSellViewController
@@ -26,13 +28,26 @@
 {
     [super viewWillAppear:animated];
     NSLog(@"%@", self.printStr);
+    NSLog(@"%@", self.greeting);
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    [self threadTest];
     
+    self.printStr = @"this is a category property implementation";
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithObjects:@"#", @"$", nil];
+    self.greeting = arr;
+    [arr addObject:@"e"];
+    NSMutableArray *mutableArray = [arr mutableCopy];
+    NSArray *arr1 = [NSArray alloc] initWithObjects:@"1", @"2", @"3", nil
+    NSLog(@"");
     
+}
+
+- (void)threadTest
+{
     tickets = 100;
     count = 0;
     theLock = [[NSLock alloc] init];
@@ -46,9 +61,7 @@
     ticketsThreadtwo = [[NSThread alloc] initWithTarget:self selector:@selector(run) object:nil];
     [ticketsThreadtwo setName:@"Thread-2"];
     [ticketsThreadtwo start];
-    self.printStr = @"this is a category property implementation";
 }
-
 
 - (void)run{
     while (TRUE) {

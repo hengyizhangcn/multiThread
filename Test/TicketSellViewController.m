@@ -20,6 +20,9 @@
 
 @property (nonatomic, strong) NSMutableArray *greeting;
 
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, copy) NSString *keyword;
 @end
 
 @implementation TicketSellViewController
@@ -39,11 +42,8 @@
     self.printStr = @"this is a category property implementation";
     NSMutableArray *arr = [[NSMutableArray alloc] initWithObjects:@"#", @"$", nil];
     self.greeting = arr;
+    self.keyword = @"123456";
     [arr addObject:@"e"];
-    NSMutableArray *mutableArray = [arr mutableCopy];
-    NSArray *arr1 = [NSArray alloc] initWithObjects:@"1", @"2", @"3", nil
-    NSLog(@"");
-    
 }
 
 - (void)threadTest
@@ -80,5 +80,14 @@
         //        [ticketsCondition unlock];
     }   
 }
+//
+//- (void)setKeyword:(NSString *)keyword
+//{
+//    _keyword = [keyword copy];
+//}
 
+- (NSString *)keyword
+{
+    return _keyword;
+}
 @end
